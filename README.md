@@ -1,49 +1,26 @@
 # SCD2 Dual-Core Optical Motion Testbed
 
-A firmware-led engineering case study built around a custom STM32H747 dual-core architecture. The system combines a 400 MHz Cortex-M7, a 200 MHz Cortex-M4, OpenAMP/RPMsg control messaging, a custom AXI-SRAM motion-record ring, target-side motor control, timestamped telemetry, a host GUI, interface electronics, and a physical dual-axis motion platform.
+A complete customer-facing case study presented in two immediately visible reports:
 
-## Start here
+- **[Dual-Core Firmware, Host Software & Results FRD](SCD2_DualCore_Firmware_Host_FRD_v2.4.pdf)** — STM32H747 Cortex-M7/M4 architecture, OpenAMP/RPMsg, AXI-SRAM shared-memory IPC, target motion firmware, live GUI, telemetry, logging, recovery behavior, and measured results.
+- **[Mechanical Platform & Electrical Integration FRD](SCD2_Platform_Electrical_FRD_v2.4.pdf)** — exploded mechanical assembly, rotary and translation systems, load path, encoder/STEP-DIR interface, PCB, solid ground plane, wiring, and physical verification.
 
-### 1. Dual-core firmware and host software
+## Firmware and software highlights
 
-[`01-dual-core-firmware/`](01-dual-core-firmware/) is the primary section. It documents:
-
-- OpenAMP/RPMsg coordination between the Cortex-M7 and Cortex-M4
+- 400 MHz Cortex-M7 + 200 MHz Cortex-M4
+- OpenAMP/RPMsg control plane with 44-byte application messages
 - 256 KiB AXI-SRAM producer/consumer ring
-- 100 Hz transfer of 64-byte motion records at 6.4 kB/s
-- 44-byte control/status messages
+- 64-byte motion records at 100 Hz / 6.4 kB/s
 - sequence-gap, overflow, heartbeat, and fault monitoring
-- target-side motion timing and safety supervision
-- host GUI, logging, validation, and recovery behavior
-- selected owned source excerpts
+- 4 µs STEP pulse, 25 kHz pulse cap, 25 ms overrun warning
+- 500 ms host heartbeat and 2 s target deadman
+- live GUI with command/measured plots, encoder position/rate, test status, and logging
+- structured CSV + metadata capture, malformed-row detection, completion markers, and partial-run recovery
+- retained low-speed, constant-speed, step-response, and closed-loop frequency-response evidence
 
-### 2. Platform and electrical integration
+## Repository sections
 
-[`02-platform-electrical/`](02-platform-electrical/) documents the physical plant supporting the firmware:
-
-- rotary and translational motion platform
-- differential encoder and STEP/DIR interfaces
-- firm-designed interface PCB with a solid-copper ground plane
-- load, travel, and configuration-specific motion evidence
-- mechanical and electrical demonstration media
-
-## Verified headline specifications
-
-| Item | Value |
-|---|---:|
-| MCU | STM32H747 |
-| Cores | 400 MHz Cortex-M7 + 200 MHz Cortex-M4 |
-| Inter-core control | OpenAMP / RPMsg |
-| High-rate data path | AXI-SRAM shared ring |
-| Ring allocation | 256 KiB |
-| Record size / rate | 64 bytes at 100 Hz |
-| Shared-memory throughput | 6.4 kB/s |
-| RPMsg application message | 44 bytes |
-| Host link | 115,200 baud |
-| Safety supervision | 500 ms host heartbeat; 2 s target deadman |
-
-## Scope and honesty
-
-The source package verifies the dual-core communications architecture and also contains the motion-control and host-software modules. The reviewed evidence does not include one tagged release binary proving that every module was merged into a single final build. The repository therefore distinguishes verified modules from release qualification.
+- [`01-dual-core-firmware/`](01-dual-core-firmware/) — architecture graphics, source excerpts, GUI/video, and measured results.
+- [`02-platform-electrical/`](02-platform-electrical/) — mechanical/electrical media, schematic, PCB evidence, and physical-system video.
 
 No third-party affiliation or endorsement is claimed.
