@@ -7,12 +7,10 @@ A complete embedded motion-instrument case study spanning two directly visible e
 
 ## Start with the two reports
 
-- **[Dual-Core Firmware, Host Software & Results FRD](SCD2_DualCore_Firmware_Host_FRD_v2.5.pdf)**
-- **[Mechanical Platform & Interface PCB FRD](SCD2_Platform_Electrical_FRD_v2.5.pdf)**
+- **[Dual-Core Firmware, Host Software & Results FRD](SCD2_DualCore_Firmware_Host_FRD_v2.6.pdf)**
+- **[Mechanical Platform & Interface PCB FRD](SCD2_Platform_Electrical_FRD_v2.6.pdf)**
 
-## Featured interface PCB
-
-![Firm-designed encoder and STEP/DIR interface PCB](SCD2_Interface_PCB_3D.png)
+## Interface PCB documentation
 
 - **[Featured PCB schematic](SCD2_Encoder_STEP_Interface_Schematic.pdf)**
 - Differential A/B encoder reception through an AM26LS32
