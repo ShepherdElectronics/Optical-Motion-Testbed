@@ -1,13 +1,7 @@
-# Local/editor files
-~$*
-.DS_Store
 Thumbs.db
+.DS_Store
+~$*
 *.tmp
 *.bak
-
-# Internal source and manufacturing files are intentionally excluded
-src/
-firmware/
+private/
 internal/
-fabrication/
-raw-data/

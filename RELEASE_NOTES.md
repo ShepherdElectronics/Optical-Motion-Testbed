@@ -1,13 +1,11 @@
 # Release Notes
 
-## Public case-study package — 2026-08-03
+## 2.0 — Firmware-first public case study
 
-- Combined SCD2 hardware/electrical and firmware/software work into one repository.
-- Organized the case study into two coordinated engineering sections.
-- Added final customer-facing FRDs in PDF and DOCX formats.
-- Included the first page only of the finalized Encoder/STEP interface schematic.
-- Included PCB routed-layer, solid-ground-plane, and 3D design evidence.
-- Included physical-system, mechanical-animation, and host-target demonstration videos.
-- Included sanitized representative characterization plots.
-- Excluded source code, editable manufacturing files, internal handoff archives, and raw development data.
-- Removed references to individuals outside the published project attribution.
+- Reorganized the repository so dual-core firmware is the primary section.
+- Added verified STM32H747 clock, OpenAMP/RPMsg, memory-map, record-size, data-rate, heartbeat, and service-cadence details.
+- Added public owned source excerpts for the IPC protocol, shared ring, and memory map.
+- Rewrote both FRDs around the dual-core architecture.
+- Added the 4,096-entry / 256 KiB allocation review finding and corrective action.
+- Retained the physical platform, PCB, GUI, videos, and characterization data as supporting evidence.
+- Removed institutional references and endorsements.
