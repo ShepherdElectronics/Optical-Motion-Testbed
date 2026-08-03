@@ -1,9 +1,10 @@
 # Release Notes
 
-## 2.6 — Separated firmware and platform/PCB reports
+## 2.7 - Final layout correction
 
-- Rebuilt both FRDs with clearly distinct purposes.
-- Removed PCB imagery and design detail from the firmware report so it remains focused on embedded architecture, GUI, telemetry, and results.
-- Restored and expanded the platform report around the exploded view, schematic, routed layer, solid ground plane, and populated PCB renders.
-- Kept both FRDs and the PCB schematic at the repository root; PCB renders remain in the platform section only.
-- Retained the GUI, videos, source excerpts, and measured results.
+- Rebuilt the firmware cover as a clean technical-report cover without an embedded GUI preview.
+- Redrew the STM32H747 architecture figure with a dedicated center communication lane and no text or connector overlap.
+- Kept GUI screenshots and measured results inside the firmware report where they support the engineering narrative.
+- Kept all PCB design evidence exclusively in the platform/electrical FRD.
+- Retained the exploded mechanical view, interface schematic, routed copper, dedicated solid-copper ground plane, and populated PCB renders.
+- Kept both completed FRDs at the repository root for immediate customer access.

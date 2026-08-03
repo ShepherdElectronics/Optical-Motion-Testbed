@@ -7,8 +7,8 @@ A complete embedded motion-instrument case study spanning two directly visible e
 
 ## Start with the two reports
 
-- **[Dual-Core Firmware, Host Software & Results FRD](SCD2_DualCore_Firmware_Host_FRD_v2.6.pdf)**
-- **[Mechanical Platform & Interface PCB FRD](SCD2_Platform_Electrical_FRD_v2.6.pdf)**
+- **[Dual-Core Firmware, Host Software & Results FRD](SCD2_DualCore_Firmware_Host_FRD_v2.7.pdf)**
+- **[Mechanical Platform & Interface PCB FRD](SCD2_Platform_Electrical_FRD_v2.7.pdf)**
 
 ## Interface PCB documentation
 
