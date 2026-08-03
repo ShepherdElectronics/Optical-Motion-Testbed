@@ -1,10 +1,10 @@
 83457f7a8c3bdab975686a07a443b79ee422f18c38210e5f0164821ff767177a  ./.gitignore
 6f5a1d50b92259e176a6a3ea985d5d251e70b5632fbacd8950fdf59cdf5c9cb2  ./01-dual-core-firmware/README.md
-f483bc7669d4167ffad511ed4a4629a59f6457ba55978e2998f96416793d8338  ./01-dual-core-firmware/architecture/dual_core_architecture.png
-824288d19bafe859d22d5b3fb37b5ebde91abfb012dec791cd246cc842523bd7  ./01-dual-core-firmware/architecture/dual_core_metrics.png
-fde2737e7fb463957fca6ef416070023d70c91129499cebe469cde5604de35ab  ./01-dual-core-firmware/architecture/motionipc_memory_map.png
-7243f202266c16c7e5f1cd5e8b0c60b401ffef2bbe9e0c91ba16ec1b05d27622  ./01-dual-core-firmware/docs/SCD2_DualCore_Firmware_Host_FRD.docx
-436ed61fcf1784ea61cadf2ab16f094f81237e8838d9e5beb43cc5407d16812b  ./01-dual-core-firmware/docs/SCD2_DualCore_Firmware_Host_FRD.pdf
+cccacd2d95350fc6ca5c73096dcd5c6c79f6319daf5193e1d9a17ad3bb8e9db3  ./01-dual-core-firmware/architecture/dual_core_architecture.png
+0960d26c2ae8b24f5e1712494a2ee67e079e2d67d69da93bdc5a54aaeae92d1f  ./01-dual-core-firmware/architecture/dual_core_metrics.png
+daebc261613c6a2a60ac28e162f1d906a60f671713c9d77e8ef7b12681ab2ff4  ./01-dual-core-firmware/architecture/motionipc_memory_map.png
+399dacea7227c67decf7fbef5ff4cfb6699aae4fcc85219b5c1b834e6b8cf24d  ./01-dual-core-firmware/docs/SCD2_DualCore_Firmware_Host_FRD.docx
+cb9a7cb8f74cf9b87b4cb6c4e6f5cd311b7c814c99395056621fae8a6cad8d52  ./01-dual-core-firmware/docs/SCD2_DualCore_Firmware_Host_FRD.pdf
 a39b51b7eee03366c92c69747351f86e50b06f3a10806f04409185926aa8b9d8  ./01-dual-core-firmware/media/gui-active-test.png
 59a707b769e84ffc1d991d5b716a17a4a71cde1d25b8a98f015fc5f1c8df61d6  ./01-dual-core-firmware/media/gui-overview.png
 5aa3be66d219e580ea5cc8e2431219ad92ed3574dd32afbb5045df61202bd9f0  ./01-dual-core-firmware/media/host-target-interface-demo.mp4
@@ -18,8 +18,8 @@ a39b51b7eee03366c92c69747351f86e50b06f3a10806f04409185926aa8b9d8  ./01-dual-core
 8063f071d6b0e1ddfbdcd839d9596cd56677e8c264559b33873460a2943bfaea  ./01-dual-core-firmware/source-excerpts/motion_ipc.h
 c30f5ebc4149380b70352f6a65ffe7b5dd499561fad9c1f5482c9cbccc55a026  ./01-dual-core-firmware/source-excerpts/shared_ring.h
 a2c7a497d3b1d6b1c031cad138c6d3e66a79b971319b7327152bd02fc35299b2  ./02-platform-electrical/README.md
-e45b283e06ca6aeba02404a8719d84375994be72351d9b63b929dd9b5e5ee15a  ./02-platform-electrical/docs/SCD2_Platform_Electrical_FRD.docx
-531efa680c916d6ce46809ea20fd3c9079c507e9276a277b69914ca330755a37  ./02-platform-electrical/docs/SCD2_Platform_Electrical_FRD.pdf
+15e98ebea73ecd3af827e7232b6e34600ab9e1f6bea12b3a101bbf93cfb7498a  ./02-platform-electrical/docs/SCD2_Platform_Electrical_FRD.docx
+dd4438a75b479c19ba2d4a77a34276a4ecf9416c512f219e5ac69a07b0c9d4e1  ./02-platform-electrical/docs/SCD2_Platform_Electrical_FRD.pdf
 ed0654722b297e4c8f54ea3d6be1379bc9798f8ddc73e74dd2a7d89a52912391  ./02-platform-electrical/media/exploded-assembly.png
 b50c0a478338bf0ad0a5e3c2fe537a89daabf29448df43c43381a745009b5902  ./02-platform-electrical/media/featured-schematic-preview.png
 02f806df530454ddcafab98e4773721b4ad523a7915232731f2654c421655813  ./02-platform-electrical/media/mechanical-assembly-animation.mp4
@@ -35,4 +35,4 @@ f4d898c6a33ae9af4c07a40f1fc48a742bb0620dd720561d71464a6e03c01b07  ./02-platform-
 4dab529f1e4c0aac29fff25408270b3c6bf472fbd66c3c0e9626725250ef3eab  ./02-platform-electrical/schematic/Encoder_STEP_Interface_Schematic.pdf
 da17e013c38c666d48fcc8b8797b9dd92c3faabeff48cbcea1a65ffb00131427  ./NOTICE.md
 3e0edce34c31af994e4c2e001a1cd48439c5fe91bad72b61940d6598bba7aaf0  ./README.md
-31663320a24eb36860147a170379b34e691ebf9be30702899a1ba93e63f46e21  ./RELEASE_NOTES.md
+0fabc9eafa627dbbf01ee3a1ded91a767b97d5869967fa7f1f8c70af540e8057  ./RELEASE_NOTES.md

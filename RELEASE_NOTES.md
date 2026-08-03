@@ -1,6 +1,6 @@
 # Release Notes
 
-## 2.0 — Firmware-first public case study
+## 2.2 — Firmware-first public case study
 
 - Reorganized the repository so dual-core firmware is the primary section.
 - Added verified STM32H747 clock, OpenAMP/RPMsg, memory-map, record-size, data-rate, heartbeat, and service-cadence details.
