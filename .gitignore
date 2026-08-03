@@ -1,0 +1,13 @@
+# Local/editor files
+~$*
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+
+# Internal source and manufacturing files are intentionally excluded
+src/
+firmware/
+internal/
+fabrication/
+raw-data/
