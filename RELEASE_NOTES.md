@@ -1,8 +1,9 @@
 # Release Notes
 
-## 2.4 — Complete software evidence release
+## 2.5 — Integrated firmware, GUI, PCB, and platform release
 
-- Rebuilt the firmware/software FRD to show the live GUI, host-target workflow, telemetry, logging, recovery behavior, automated test sequences, and measured results.
-- Retained deep STM32H747 dual-core architecture details and selected owned source excerpts.
-- Kept the platform/electrical FRD visually distinct with the exploded view, mechanical assembly, schematic, PCB, solid ground plane, and physical verification.
-- Placed both final FRDs at the repository root for immediate customer access.
+- Rebuilt both FRDs with clearly distinct purposes.
+- Added the custom interface PCB to the firmware report as the real hardware I/O layer.
+- Restored and expanded the platform report around the exploded view, schematic, routed layer, solid ground plane, and populated PCB renders.
+- Surfaced both FRDs, the PCB schematic, and a 3D PCB image at the repository root.
+- Retained the GUI, videos, source excerpts, and measured results.

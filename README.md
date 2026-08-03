@@ -1,26 +1,37 @@
 # SCD2 Dual-Core Optical Motion Testbed
 
-A complete customer-facing case study presented in two immediately visible reports:
+A complete embedded motion-instrument case study spanning two directly visible engineering sides:
 
-- **[Dual-Core Firmware, Host Software & Results FRD](SCD2_DualCore_Firmware_Host_FRD_v2.4.pdf)** — STM32H747 Cortex-M7/M4 architecture, OpenAMP/RPMsg, AXI-SRAM shared-memory IPC, target motion firmware, live GUI, telemetry, logging, recovery behavior, and measured results.
-- **[Mechanical Platform & Electrical Integration FRD](SCD2_Platform_Electrical_FRD_v2.4.pdf)** — exploded mechanical assembly, rotary and translation systems, load path, encoder/STEP-DIR interface, PCB, solid ground plane, wiring, and physical verification.
+1. **Dual-core firmware, host software, and measured results**
+2. **Mechanical platform, custom interface PCB, and electrical integration**
 
-## Firmware and software highlights
+## Start with the two reports
 
-- 400 MHz Cortex-M7 + 200 MHz Cortex-M4
-- OpenAMP/RPMsg control plane with 44-byte application messages
+- **[Dual-Core Firmware, Host Software & Results FRD](SCD2_DualCore_Firmware_Host_FRD_v2.5.pdf)**
+- **[Mechanical Platform & Interface PCB FRD](SCD2_Platform_Electrical_FRD_v2.5.pdf)**
+
+## Featured interface PCB
+
+![Firm-designed encoder and STEP/DIR interface PCB](SCD2_Interface_PCB_3D.png)
+
+- **[Featured PCB schematic](SCD2_Encoder_STEP_Interface_Schematic.pdf)**
+- Differential A/B encoder reception through an AM26LS32
+- Controller-facing ENC_A / ENC_B / STEP_CTRL / DIR_CTRL signals
+- R725 STEP/DIR motor-driver interface
+- Dedicated solid-copper ground plane
+
+## Dual-core firmware headline
+
+- STM32H747: 400 MHz Cortex-M7 + 200 MHz Cortex-M4
+- OpenAMP/RPMsg control and status messaging
 - 256 KiB AXI-SRAM producer/consumer ring
-- 64-byte motion records at 100 Hz / 6.4 kB/s
+- 64-byte records at 100 Hz (6.4 kB/s internal data path)
 - sequence-gap, overflow, heartbeat, and fault monitoring
-- 4 µs STEP pulse, 25 kHz pulse cap, 25 ms overrun warning
-- 500 ms host heartbeat and 2 s target deadman
-- live GUI with command/measured plots, encoder position/rate, test status, and logging
-- structured CSV + metadata capture, malformed-row detection, completion markers, and partial-run recovery
-- retained low-speed, constant-speed, step-response, and closed-loop frequency-response evidence
+- live GUI, timestamped logging, automated workflows, and measured results
 
 ## Repository sections
 
-- [`01-dual-core-firmware/`](01-dual-core-firmware/) — architecture graphics, source excerpts, GUI/video, and measured results.
-- [`02-platform-electrical/`](02-platform-electrical/) — mechanical/electrical media, schematic, PCB evidence, and physical-system video.
+- [`01-dual-core-firmware/`](01-dual-core-firmware/) — architecture, source excerpts, GUI, video, and results
+- [`02-platform-electrical/`](02-platform-electrical/) — exploded assembly, PCB, schematic, physical media, and platform report
 
 No third-party affiliation or endorsement is claimed.

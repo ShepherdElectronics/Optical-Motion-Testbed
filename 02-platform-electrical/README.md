@@ -1,22 +1,13 @@
-# 2. Platform and Electrical Integration
+# 2. Mechanical Platform & Interface PCB
 
-This section documents the physical motion platform and the interfaces that support the STM32H747 dual-core firmware.
+Primary report: [`docs/SCD2_Platform_Electrical_FRD.pdf`](docs/SCD2_Platform_Electrical_FRD.pdf)
 
-## Included
+This section covers the exploded mechanical assembly, load-bearing platform, translation mechanism, differential encoder and STEP/DIR interface schematic, routed PCB, solid ground plane, populated 3D renders, and physical verification.
 
-- dual-axis mechanical platform
-- differential encoder interface
-- STEP/DIR motor-driver interface
-- custom PCB with a solid-copper ground plane
-- featured schematic and PCB renders
-- system, load, and motion demonstration media
-- configuration-specific motion scaling
+## Featured PCB assets
 
-## Read first
-
-- [`docs/SCD2_Platform_Electrical_FRD.pdf`](docs/SCD2_Platform_Electrical_FRD.pdf)
 - [`schematic/Encoder_STEP_Interface_Schematic.pdf`](schematic/Encoder_STEP_Interface_Schematic.pdf)
-- [`media/system-assembly.png`](media/system-assembly.png)
+- [`media/pcb-routed-layer.png`](media/pcb-routed-layer.png)
 - [`media/pcb-solid-ground-plane.png`](media/pcb-solid-ground-plane.png)
-
-The hardware is presented as the plant and signal-integrity layer for the firmware architecture, not as an isolated mechanical project.
+- [`media/pcb-3d-front.png`](media/pcb-3d-front.png)
+- [`media/pcb-3d-angle.png`](media/pcb-3d-angle.png)
