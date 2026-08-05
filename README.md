@@ -1,14 +1,30 @@
 # Dual-Core Optical Motion Testbed
 
-A customer-facing case study of a complete precision-motion instrument developed across two coordinated engineering layers:
+A precision rotary and translation motion-control testbed built around an STM32H747 dual-core controller, differential encoder feedback, STEP/DIR motor control, custom interface electronics, live telemetry, automated test execution, and measured system characterization.
 
-1. **Dual-Core Firmware, Host Software & Results** - STM32H747 Cortex-M7/M4 architecture, OpenAMP/RPMsg coordination, AXI-SRAM motion-data transfer, live GUI, telemetry, reliability controls, automation, and measured results.
-2. **Mechanical Platform & Interface PCB** - rotary and translational hardware, load-bearing structure, differential encoder and STEP/DIR interfaces, firm-designed PCB, dedicated solid-copper ground plane, and physical verification.
+## Engineering reports
 
-## Start here
+- [Firmware, Host Software, and Results FRD](documentation/engineering-reports/DualCore_Optical_Motion_Firmware_Host_FRD_v5.0.pdf)
+- [Mechanical Platform and Interface PCB FRD](documentation/engineering-reports/DualCore_Optical_Motion_Platform_Electrical_FRD_v5.0.pdf)
 
-- **[Firmware, Host Software & Results FRD](DualCore_Optical_Motion_Firmware_Host_FRD_v3.0.pdf)**
-- **[Mechanical Platform & Interface PCB FRD](DualCore_Optical_Motion_Platform_Electrical_FRD_v3.0.pdf)**
-- **[Encoder/STEP Interface Schematic](Encoder_STEP_Interface_Schematic.pdf)**
+## Repository structure
 
-The two reports are placed at the repository root so reviewers can immediately understand the embedded-software and physical-platform sides of the project. Selected source excerpts and public evidence are organized in the two numbered sections. Proprietary development archives and editable manufacturing outputs are excluded.
+- `01-dual-core-firmware` - embedded firmware, inter-core communication, telemetry, host tools, and test results
+- `02-platform-electrical` - mechanical platform, interface PCB, schematic, routed copper, ground plane, and verification evidence
+- `documentation/engineering-reports` - controlled PDF and editable DOCX engineering reports
+
+## System highlights
+
+- STM32H747 Cortex-M7 and Cortex-M4 architecture
+- OpenAMP/RPMsg control-plane communication
+- AXI-SRAM shared-memory telemetry path
+- Differential encoder reception
+- STEP/DIR motion control
+- Live GUI visualization and CSV logging
+- Automated motion characterization
+- Custom interface PCB with a dedicated ground plane
+- Rotary and translation test capability
+
+## Documentation
+
+See `NOTICE.md` and `RELEASE_NOTES.md` for distribution notes and revision history.
