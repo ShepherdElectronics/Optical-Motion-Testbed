@@ -7,8 +7,8 @@ A customer-facing case study of a complete precision-motion instrument developed
 
 ## Start here
 
-- **[Firmware, Host Software & Results FRD](DualCore_Optical_Motion_Firmware_Host_FRD_v2.9.pdf)**
-- **[Mechanical Platform & Interface PCB FRD](DualCore_Optical_Motion_Platform_Electrical_FRD_v2.9.pdf)**
+- **[Firmware, Host Software & Results FRD](DualCore_Optical_Motion_Firmware_Host_FRD_v3.0.pdf)**
+- **[Mechanical Platform & Interface PCB FRD](DualCore_Optical_Motion_Platform_Electrical_FRD_v3.0.pdf)**
 - **[Encoder/STEP Interface Schematic](Encoder_STEP_Interface_Schematic.pdf)**
 
 The two reports are placed at the repository root so reviewers can immediately understand the embedded-software and physical-platform sides of the project. Selected source excerpts and public evidence are organized in the two numbered sections. Proprietary development archives and editable manufacturing outputs are excluded.
