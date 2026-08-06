@@ -4,7 +4,7 @@ A precision motion-control testbed integrating STM32H747 dual-core embedded cont
 
 ## Engineering reports
 
-- [Firmware, Host Software, and Results FRD v5.0](documentation/engineering-reports/DualCore_Optical_Motion_Firmware_Host_FRD_v5.0.pdf)
+- [Firmware, Host Software, and Results FRD v5.2](documentation/engineering-reports/DualCore_Optical_Motion_Firmware_Host_FRD_v5.2.pdf)
 - [Mechanical Platform and Interface PCB FRD v5.0](documentation/engineering-reports/DualCore_Optical_Motion_Platform_Electrical_FRD_v5.0.pdf)
 
 ## Repository structure
