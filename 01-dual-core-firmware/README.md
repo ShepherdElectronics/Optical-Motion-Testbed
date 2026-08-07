@@ -18,3 +18,7 @@ The [`source-excerpts`](source-excerpts/) folder now includes directly reviewabl
 - a host-side uint32 microsecond timestamp-wrap helper and executable wrap-crossing test.
 
 The complete MPU/cache setup, memory barriers, producer/consumer publication ordering, and full OpenAMP implementation remain controlled private source and are not claimed to be independently verifiable from the public excerpts.
+
+## Audit boundary
+
+This public release is an evidence-rich engineering case study, not a complete source audit of the controlled firmware. The published material supports review of the architecture, memory/protocol contracts, compile-time guards, timestamp-wrap behavior, interfaces, and measured results. Full OpenAMP/RPMsg runtime integration, MPU/cache policy, barriers, and producer/consumer publication ordering remain private and must not be represented as fully source-auditable from this repository.
