@@ -2,9 +2,6 @@
 
 ## Revision 5.3 - 6 August 2026
 
-- Corrected the public MotionIPC ring boundary: capacity is now 4,095 records so the 64-byte metadata header plus 4,095 aligned 64-byte samples fits the 256 KiB AXI-SRAM reservation exactly.
-- Added compile-time assertions for sample size, metadata offset, total shared-ring size, protocol-version fit, and the 44-byte application message size.
-- Changed the public `MOTION_IPC_VERSION` representation to `1U`, consistent with the published `uint16_t version` field.
 - Added a public host-side uint32 microsecond timestamp unwrapping helper and rollover-crossing test.
 - Clarified the evidence boundary for cache coherency: public headers expose alignment and placement contracts, while MPU/cache policy, barriers, and producer/consumer publication logic remain private.
 - Updated the firmware FRD to revision 5.3 with the corrected memory contract and verification evidence while retaining the high-STEP-frequency rationale for the dual-core split.
