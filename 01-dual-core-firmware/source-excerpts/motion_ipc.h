@@ -8,7 +8,7 @@ extern "C" {
 #endif
 
 #define MOTION_IPC_SERVICE_NAME "motion_ipc"
-#define MOTION_IPC_VERSION      (0x00010000UL)
+#define MOTION_IPC_VERSION      (1U)
 #define MOTION_IPC_PAYLOAD_WORDS 8U
 
 typedef enum

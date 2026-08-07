@@ -9,7 +9,7 @@
 extern "C" {
 #endif
 
-/* Keep the sample 32-byte aligned for Cortex-M7 cache-line sanity. */
+/* Keep each sample on a 32-byte boundary for the Cortex-M7 cache-line policy. */
 typedef struct __attribute__((packed, aligned(32)))
 {
     uint32_t seq;
@@ -42,6 +42,22 @@ typedef struct __attribute__((aligned(32)))
     volatile uint32_t reserved[3];
     MotionRawSample samples[MOTIONIPC_RING_CAPACITY];
 } MotionSharedRing;
+
+#if defined(__cplusplus)
+static_assert(sizeof(MotionRawSample) == 64U,
+              "MotionRawSample must remain 64 bytes");
+static_assert(offsetof(MotionSharedRing, samples) == 64U,
+              "MotionSharedRing metadata must remain 64 bytes");
+static_assert(sizeof(MotionSharedRing) <= MOTIONIPC_RAW_RING_BYTES,
+              "MotionSharedRing exceeds reserved AXI SRAM region");
+#else
+_Static_assert(sizeof(MotionRawSample) == 64U,
+               "MotionRawSample must remain 64 bytes");
+_Static_assert(offsetof(MotionSharedRing, samples) == 64U,
+               "MotionSharedRing metadata must remain 64 bytes");
+_Static_assert(sizeof(MotionSharedRing) <= MOTIONIPC_RAW_RING_BYTES,
+               "MotionSharedRing exceeds reserved AXI SRAM region");
+#endif
 
 #define MOTION_SHARED_RING ((MotionSharedRing *)MOTIONIPC_RAW_RING_BASE)
 
