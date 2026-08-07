@@ -4,7 +4,7 @@
 
 - Added a public host-side uint32 microsecond timestamp unwrapping helper and rollover-crossing test.
 - Clarified the evidence boundary for cache coherency: public headers expose alignment and placement contracts, while MPU/cache policy, barriers, and producer/consumer publication logic remain private.
-- Updated the firmware FRD to revision 5.3 with the corrected memory contract and verification evidence while retaining the high-STEP-frequency rationale for the dual-core split.
+- Updated the firmware FRD to revision 5.3 with the documented memory contract and verification evidence while retaining the high-STEP-frequency rationale for the dual-core split.
 
 ## Revision 5.1 - 5 August 2026
 
