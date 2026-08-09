@@ -48,15 +48,19 @@ static_assert(sizeof(MotionRawSample) == 64U,
               "MotionRawSample must remain 64 bytes");
 static_assert(offsetof(MotionSharedRing, samples) == 64U,
               "MotionSharedRing metadata must remain 64 bytes");
-static_assert(sizeof(MotionSharedRing) <= MOTIONIPC_RAW_RING_BYTES,
-              "MotionSharedRing exceeds reserved AXI SRAM region");
+static_assert(MOTIONIPC_RING_LAYOUT_BYTES == MOTIONIPC_RAW_RING_BYTES,
+              "MotionIPC metadata and records must fill the reserved AXI SRAM region");
+static_assert(sizeof(MotionSharedRing) == MOTIONIPC_RAW_RING_BYTES,
+              "MotionSharedRing must exactly fit the reserved AXI SRAM region");
 #else
 _Static_assert(sizeof(MotionRawSample) == 64U,
                "MotionRawSample must remain 64 bytes");
 _Static_assert(offsetof(MotionSharedRing, samples) == 64U,
                "MotionSharedRing metadata must remain 64 bytes");
-_Static_assert(sizeof(MotionSharedRing) <= MOTIONIPC_RAW_RING_BYTES,
-               "MotionSharedRing exceeds reserved AXI SRAM region");
+_Static_assert(MOTIONIPC_RING_LAYOUT_BYTES == MOTIONIPC_RAW_RING_BYTES,
+               "MotionIPC metadata and records must fill the reserved AXI SRAM region");
+_Static_assert(sizeof(MotionSharedRing) == MOTIONIPC_RAW_RING_BYTES,
+               "MotionSharedRing must exactly fit the reserved AXI SRAM region");
 #endif
 
 #define MOTION_SHARED_RING ((MotionSharedRing *)MOTIONIPC_RAW_RING_BASE)
