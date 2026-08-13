@@ -1,8 +1,0 @@
-Connector pin,Signal,Board pin,MCU pin,Status,Notes
-1,Encoder A,D2,PA3,ACTIVE,AM26LS32 output
-2,Encoder B,D3,PA2,ACTIVE,AM26LS32 output
-3,STEP,D10,PK1,ACTIVE,Through transistor to R725
-4,DIR,D13,PH6,ACTIVE,Through transistor to R725
-5,Encoder Z / Index,D4,PJ8,WIRED / UNUSED,Current firmware ignores index
-6,+5V,5V,-,POWER,Interface logic rail
-7,GND,GND,-,POWER,Common logic/interface reference

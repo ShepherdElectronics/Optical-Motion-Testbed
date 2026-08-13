@@ -1,30 +1,33 @@
 # Dual-Core Optical Motion Testbed
 
-A precision rotary/translation motion-control testbed integrating STM32H747 dual-core control, differential encoder feedback, STEP/DIR actuation, custom interface electronics, live telemetry, automated testing, and measured characterization.
+Public engineering portfolio package for a dual-core STM32H747 motion-control testbed and its physical verification platform.
 
-## Featured engineering reports
+## Public scope
 
-- [Firmware, Host Software & Results FRD v5.3](documentation/engineering-reports/DualCore_Optical_Motion_Firmware_Host_FRD_v5.3.pdf)
-- [Mechanical Platform & Interface PCB FRD v5.1](documentation/engineering-reports/DualCore_Optical_Motion_Platform_Electrical_FRD_v5.1.pdf)
+This repository documents system-level architecture, requirements, verification evidence, and measured prototype results. The private firmware archive was reviewed to align public claims with the implemented design, but the implementation itself is not distributed here.
 
-## Firmware implementation notes
+The firmware architecture uses the STM32H747's two cores to separate fixed-rate motion/encoder control from variable-duration communications and telemetry activity. Shared-memory exchange is treated as a correctness-critical interface: bounded storage, coherency, synchronization, stale-data prevention, and publication integrity are explicit requirements. Exact memory placement, cache/MPU policy, barrier placement, synchronization logic, source code, and build configuration remain private.
 
-- The dual-core split is motivated by STEP-frequency headroom at the 256-microstep setting, not by the 100 Hz validation telemetry workload.
-- The public MotionIPC ring now contains 4,095 records so the metadata header and records fit the 256 KiB AXI-SRAM reservation exactly.
-- Public compile-time tests guard the ring boundary and protocol wire representation.
-- A published timestamp-wrap test verifies host-side reconstruction across the uint32 microsecond rollover.
-- Full cache/MPU and producer-consumer synchronization logic remains in the private controlled implementation.
+The source-grounded control status is deliberately stated conservatively. The private archive contains an encoder-based closed position/speed control path that can produce a sensored rotating voltage vector. It also contains an integration path for current-sensed field-oriented control, but commissioned current-regulated FOC is not claimed by this public package because board-specific phase-current and power-stage integration are outside the demonstrated evidence.
 
-## Reproducible configuration
+## Engineering reports
 
-- [R725 microstep DIP-switch table](02-platform-electrical/configuration/r725-microstep-switch-table.csv)
-- [Seven-pin interface map](02-platform-electrical/configuration/interface-pinout.csv)
-- [Prototype electrical BOM and release corrections](02-platform-electrical/configuration/prototype-electrical-bom.md)
-- [Hardware power-up and acceptance procedure](02-platform-electrical/configuration/power-up-and-acceptance.md)
-- [Firmware signal mapping and characterized assumptions](01-dual-core-firmware/configuration/README.md)
+- [Firmware, Host Software & Results FRD v7.0](documentation/engineering-reports/DualCore_Optical_Motion_Firmware_Host_FRD_v7.0.pdf)
+- [Mechanical Platform & Physical Verification FRD v7.0](documentation/engineering-reports/DualCore_Optical_Motion_Platform_Electrical_FRD_v7.0.pdf)
 
-## Repository structure
+## Demonstrated public evidence
 
-- `01-dual-core-firmware` - firmware architecture, host GUI, telemetry, automation, results, and software configuration
-- `02-platform-electrical` - mechanics, PCB, schematic, grounding, driver configuration, pinout, BOM, assembly, and hardware verification
-- `documentation/engineering-reports` - controlled PDF and editable DOCX FRDs
+- dual-core workload separation
+- fixed-rate encoder-feedback control architecture
+- host telemetry and automated characterization evidence
+- measured low-speed, constant-speed, transient, and closed-loop response results
+- completed rotary/translation platform
+- greater-than-plus/minus-3-inch translation evidence
+- 40 lb static offset-load demonstration
+- shared-memory coherency and bounds treated as explicit correctness requirements
+
+## Intentionally not published
+
+No source code, Simulink/model files, CAD/NX files, schematics, PCB layout, BOM, pinout, DIP-switch table, memory map, linker placement, cache/MPU configuration, synchronization code, setup instructions, build/flash instructions, assembly procedure, or production configuration is included.
+
+See `PUBLIC_RELEASE_BOUNDARY.md` for the publication boundary.
