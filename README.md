@@ -4,10 +4,10 @@ Public engineering portfolio package for a bench-scale optical motion platform a
 
 ## Featured engineering reports
 
-- [Firmware, Host Software & Results FRD v7.3](DualCore_Optical_Motion_Firmware_Host_FRD_v7.3.pdf)  
+- [Firmware, Host Software & Results FRD v7.3.1](DualCore_Optical_Motion_Firmware_Host_FRD_v7.3.1.pdf)  
   Dual-core architecture rationale, nominal 1 kHz encoder-supervisory control, host telemetry, shared-memory correctness requirements, state/fault behavior, measured characterization, control-path maturity, and verification traceability.
 
-- [Mechanical Platform & Physical Verification FRD v7.3](DualCore_Optical_Motion_Platform_Electrical_FRD_v7.3.pdf)  
+- [Mechanical Platform & Physical Verification FRD v7.3.1](DualCore_Optical_Motion_Platform_Electrical_FRD_v7.3.1.pdf)  
   Mechanical requirements, physical integration, translation verification, static-load evidence, representative integrated motion results, interface responsibilities, and verification traceability.
 
 Both reports use the established Herder professional FRD template.

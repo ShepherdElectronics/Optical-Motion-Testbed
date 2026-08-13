@@ -1,4 +1,4 @@
-# Release Notes - v7.3
+# Release Notes - v7.3.1
 
 Date: 13 August 2026
 
@@ -12,3 +12,5 @@ Date: 13 August 2026
 - Presented shared-buffer fit as a production invariant enforced by compile-time layout checks; no defect-history narrative is included.
 - Preserved public-safe GUI, measured-result, physical-platform, translation, load, and integrated-motion evidence.
 - No source code, models, schematics, PCB/CAD data, setup instructions, or reproduction-level implementation details are included.
+
+- Corrected first-page typography and restored the established compact FRD cover hierarchy without altering technical content.
