@@ -1,33 +1,26 @@
 # Dual-Core Optical Motion Testbed
 
-Public engineering portfolio package for a dual-core STM32H747 motion-control testbed and its physical verification platform.
+Public engineering portfolio package for a bench-scale optical motion platform and its STM32H747 dual-core control/test architecture.
 
-## Public scope
+## Featured engineering reports
 
-This repository documents system-level architecture, requirements, verification evidence, and measured prototype results. The private firmware archive was reviewed to align public claims with the implemented design, but the implementation itself is not distributed here.
+- `DualCore_Optical_Motion_Firmware_Host_FRD_v7.1.pdf` - dual-core architecture rationale, 1 kHz encoder-control behavior, host telemetry, shared-memory correctness requirements, fault/state behavior, measured characterization, maturity boundaries, and verification traceability.
+- `DualCore_Optical_Motion_Platform_Electrical_FRD_v7.1.pdf` - mechanical platform requirements, physical integration, translation verification, static-load evidence, representative integrated motion results, interface responsibilities, and verification traceability.
 
-The firmware architecture uses the STM32H747's two cores to separate fixed-rate motion/encoder control from variable-duration communications and telemetry activity. Shared-memory exchange is treated as a correctness-critical interface: bounded storage, coherency, synchronization, stale-data prevention, and publication integrity are explicit requirements. Exact memory placement, cache/MPU policy, barrier placement, synchronization logic, source code, and build configuration remain private.
+Both reports use the established Herder professional FRD template.
 
-The source-grounded control status is deliberately stated conservatively. The private archive contains an encoder-based closed position/speed control path that can produce a sensored rotating voltage vector. It also contains an integration path for current-sensed field-oriented control, but commissioned current-regulated FOC is not claimed by this public package because board-specific phase-current and power-stage integration are outside the demonstrated evidence.
+## Technical highlights
 
-## Engineering reports
+- STM32H747 heterogeneous dual-core architecture: Cortex-M7 at 400 MHz and Cortex-M4 at 200 MHz.
+- Dual-core workload separation selected to protect timing-critical motion work from variable-latency communication and telemetry activity; the public 100 Hz telemetry workload is not presented as the reason two cores are required.
+- Reviewed private v0.3 firmware includes an encoder-based closed position/speed control path with a nominal 1 kHz control cadence.
+- Current-sensed d/q FOC is treated as an integration path, not as commissioned platform operation in the public claims.
+- Inter-core data integrity is treated as a system requirement: cache coherency, publication ordering, buffer bounds, sequence continuity, version compatibility, and timestamp rollover must be verified.
+- A previously identified shared-buffer boundary defect was corrected in the private implementation and guarded by compile-time fit checks.
+- Public measured evidence includes low-speed tracking, constant-speed behavior, step response, sine-response characterization, translation travel, static loading, and integrated platform motion.
 
-- [Firmware, Host Software & Results FRD v7.0](documentation/engineering-reports/DualCore_Optical_Motion_Firmware_Host_FRD_v7.0.pdf)
-- [Mechanical Platform & Physical Verification FRD v7.0](documentation/engineering-reports/DualCore_Optical_Motion_Platform_Electrical_FRD_v7.0.pdf)
+## Public release boundary
 
-## Demonstrated public evidence
+This repository is intentionally not a reproduction package. It contains no source code, Simulink/model files, CAD/NX models, schematics, PCB artwork, BOMs, pinouts, DIP-switch tables, wiring diagrams, memory maps, linker placement, cache/MPU settings, synchronization implementation, build/flash instructions, assembly procedures, or setup instructions.
 
-- dual-core workload separation
-- fixed-rate encoder-feedback control architecture
-- host telemetry and automated characterization evidence
-- measured low-speed, constant-speed, transient, and closed-loop response results
-- completed rotary/translation platform
-- greater-than-plus/minus-3-inch translation evidence
-- 40 lb static offset-load demonstration
-- shared-memory coherency and bounds treated as explicit correctness requirements
-
-## Intentionally not published
-
-No source code, Simulink/model files, CAD/NX files, schematics, PCB layout, BOM, pinout, DIP-switch table, memory map, linker placement, cache/MPU configuration, synchronization code, setup instructions, build/flash instructions, assembly procedure, or production configuration is included.
-
-See `PUBLIC_RELEASE_BOUNDARY.md` for the publication boundary.
+The public documents describe requirements, engineering rationale, observable behavior, verification methods, limitations, and measured evidence. Implementation-level intellectual property remains private.

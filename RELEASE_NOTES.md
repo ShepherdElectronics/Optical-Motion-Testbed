@@ -1,12 +1,14 @@
-# Release Notes
+# Release Notes - v7.1
 
-## v7.0 - 12 August 2026
+Date: 13 August 2026
 
-- Rebuilt the public-facing documents against the private `STM32H747_MotionIPC_v0_3_encoder_safe` firmware archive.
-- Preserved the established Herder engineering-report DOCX template.
-- Reconciled public claims with the actual firmware maturity.
-- Identified the implemented control path as encoder-based closed position/speed control rather than commissioned current-regulated FOC.
-- Retained current-sensed FOC only as a future/integration capability, not a demonstrated public claim.
-- Made shared-memory coherency, bounds safety, synchronization integrity, watchdog behavior, and output gating explicit system-level requirements.
-- Kept exact memory, cache/MPU, barrier, synchronization, board, build, and setup implementation private.
-- Removed all source code, models, schematics, PCB/CAD design files, pinouts, BOMs, DIP-switch data, and setup/reproduction instructions from the public package.
+- Restored the established v5 Herder professional FRD template for both reports.
+- Re-expanded technical detail after the v7.0 public package became too abbreviated.
+- Reconciled firmware claims with the reviewed `STM32H747_MotionIPC_v0_3_encoder_safe` private archive.
+- Added explicit architecture rationale distinguishing high-rate motion timing needs from the modest public telemetry workload.
+- Added nominal 1 kHz encoder-control behavior, safety-state/fault requirements, and a clear current-sensed FOC maturity boundary.
+- Expanded shared-memory correctness requirements covering coherency, publication ordering, buffer bounds, sequence continuity, versioning, and timestamp rollover without exposing the private implementation.
+- Documented that a previously identified shared-buffer boundary defect was corrected and guarded by compile-time fit checks while withholding exact layout details.
+- Expanded platform requirements, translation and load interpretation, interface responsibilities, acceptance criteria, and traceability.
+- Removed orphaned embedded media from the DOCX packages so sensitive CAD/PCB/schematic figures are not present even as unused document resources.
+- Preserved only public-safe GUI, measured-result, physical-platform, translation, load, and integrated-motion figures.

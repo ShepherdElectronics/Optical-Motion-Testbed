@@ -1,30 +1,27 @@
 # Public Release Boundary
 
-This package is intended to demonstrate engineering capability without providing a reproduction package.
+The Dual-Core Optical Motion Testbed public portfolio is designed to prove engineering capability without distributing a reproducible implementation.
 
 ## Included
 
-- public functional requirements
-- high-level architecture and subsystem boundaries
-- selected photographs and non-sensitive system figures
-- measured prototype results
-- verification and traceability summaries
-- explicit discussion of correctness risks such as shared-memory coherency, stale-data prevention, bounds enforcement, watchdog behavior, and fault-state control
-- source-grounded maturity statements distinguishing implemented encoder-based control from uncommissioned current-sensed FOC integration
+- Functional and performance requirements
+- Architectural rationale and subsystem responsibilities
+- Safety and fault-behavior requirements
+- Shared-memory correctness requirements and verification intent
+- Host/test workflow at a functional level
+- Measured performance plots and physical verification evidence
+- Requirements-to-evidence traceability
+- Explicit maturity and limitation statements
 
-## Retained privately
+## Withheld
 
-- embedded source code and complete firmware trees
-- host application source
-- Simulink and other editable engineering models
-- exact memory map and linker placement
-- cache/MPU attributes and cache-maintenance policy
-- memory-barrier and publication-order implementation
-- producer/consumer synchronization logic
-- interrupt, timer, scheduling, PWM, and board-specific configuration
-- schematics, PCB artwork, BOMs, connector definitions, pinouts, DIP-switch settings, wiring, and grounding implementation
-- CAD/NX geometry and manufacturing drawings
-- assembly, commissioning, setup, build, and flashing instructions
-- private test harnesses and reusable development tooling
+- Source code and generated code
+- Simulink or other editable engineering models
+- CAD/NX models and fabrication drawings
+- Schematics, PCB layout, grounding implementation, BOM, pinouts, wiring, and switch settings
+- Memory maps, linker placement, exact shared-buffer layout, cache/MPU configuration, barriers, and synchronization code
+- Board-specific peripheral mapping and power-stage integration
+- Controller tuning constants and production calibration values
+- Build, flash, setup, commissioning, assembly, and reproduction instructions
 
-The public FRDs state requirements and evidence at the system level. They should not be interpreted as source releases, manufacturing packages, setup manuals, or certification records.
+The public FRDs may state that these mechanisms exist or are required when that is necessary to explain system correctness. They do not disclose the private implementation method.
