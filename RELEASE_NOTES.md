@@ -1,14 +1,14 @@
-# Release Notes - v7.1
+# Release Notes - v7.3
 
 Date: 13 August 2026
 
-- Restored the established v5 Herder professional FRD template for both reports.
-- Re-expanded technical detail after the v7.0 public package became too abbreviated.
-- Reconciled firmware claims with the reviewed `STM32H747_MotionIPC_v0_3_encoder_safe` private archive.
-- Added explicit architecture rationale distinguishing high-rate motion timing needs from the modest public telemetry workload.
-- Added nominal 1 kHz encoder-control behavior, safety-state/fault requirements, and a clear current-sensed FOC maturity boundary.
-- Expanded shared-memory correctness requirements covering coherency, publication ordering, buffer bounds, sequence continuity, versioning, and timestamp rollover without exposing the private implementation.
-- Documented that a previously identified shared-buffer boundary defect was corrected and guarded by compile-time fit checks while withholding exact layout details.
-- Expanded platform requirements, translation and load interpretation, interface responsibilities, acceptance criteria, and traceability.
-- Removed orphaned embedded media from the DOCX packages so sensitive CAD/PCB/schematic figures are not present even as unused document resources.
-- Preserved only public-safe GUI, measured-result, physical-platform, translation, load, and integrated-motion figures.
+- Preserved the established Herder professional FRD template for both reports.
+- Reconciled public firmware claims against the latest reviewed v0.3 implementation evidence.
+- Clarified that the active control path is encoder-only closed position/speed control producing a sensored rotating voltage-vector demand.
+- Clarified that the nominal 1 kHz rate is the encoder/supervisory control cadence, not a PWM carrier or STEP-pulse frequency.
+- Preserved the original dual-core rationale: timing-critical motion work is isolated from variable-latency command, telemetry, diagnostic, and test-service activity.
+- Kept current-regulated d/q FOC as a future integration path rather than a commissioned public-performance claim.
+- Retained shared-memory correctness requirements covering coherency, publication ordering, bounded storage, sequence continuity, version compatibility, and timestamp rollover without exposing private implementation details.
+- Presented shared-buffer fit as a production invariant enforced by compile-time layout checks; no defect-history narrative is included.
+- Preserved public-safe GUI, measured-result, physical-platform, translation, load, and integrated-motion evidence.
+- No source code, models, schematics, PCB/CAD data, setup instructions, or reproduction-level implementation details are included.
