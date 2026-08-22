@@ -1,6 +1,6 @@
 # Release Notes
 
-## v7.3.2
+## v7.3.3
 
 - Restored engineering figures to both FRDs while retaining the established professional document template.
 - Restored public-safe GUI, architecture, characterization, mechanical, load, CAD-context, schematic, PCB-routing, ground-plane, and board-render evidence.
@@ -23,3 +23,9 @@ Date: 13 August 2026
 - No source code, models, schematics, PCB/CAD data, setup instructions, or reproduction-level implementation details are included.
 
 - Corrected first-page typography and restored the established compact FRD cover hierarchy without altering technical content.
+
+## v7.3.3
+
+- Consolidated the FRD figure presentation so every displayed caption belongs to an embedded figure.
+- Preserved the established production-document template and public-release boundary.
+- Retained embedded platform schematic and PCB figures as documentation evidence without distributing editable design sources.
