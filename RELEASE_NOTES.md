@@ -1,4 +1,13 @@
-# Release Notes - v7.3.1
+# Release Notes
+
+## v7.3.2
+
+- Restored engineering figures to both FRDs while retaining the established professional document template.
+- Restored public-safe GUI, architecture, characterization, mechanical, load, CAD-context, schematic, PCB-routing, ground-plane, and board-render evidence.
+- Schematic and PCB figures are embedded only inside the Platform/Electrical FRD; editable EDA/fabrication files are not distributed.
+- Preserved the public/private boundary for source code, models, setup instructions, BOMs, pin maps, detailed memory configuration, and reproduction-level implementation material.
+
+ - v7.3.1
 
 Date: 13 August 2026
 

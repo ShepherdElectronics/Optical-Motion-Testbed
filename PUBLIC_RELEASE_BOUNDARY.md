@@ -27,3 +27,8 @@ The Dual-Core Optical Motion Testbed public portfolio is designed to demonstrate
 - Build, flash, setup, commissioning, assembly, and reproduction instructions
 
 The public FRDs may identify a required mechanism, timing boundary, or correctness property where that is necessary to explain system behavior. They do not disclose the private implementation method.
+
+
+## Embedded figures
+
+Selected schematic and PCB images may appear inside the Platform/Electrical FRD as fixed documentation figures. Their presence in the report does not place the editable schematic, PCB layout, fabrication package, CAD/EDA project, BOM, pin map, or setup instructions into the public release.

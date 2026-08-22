@@ -4,10 +4,10 @@ Public engineering portfolio package for a bench-scale optical motion platform a
 
 ## Featured engineering reports
 
-- [Firmware, Host Software & Results FRD v7.3.1](DualCore_Optical_Motion_Firmware_Host_FRD_v7.3.1.pdf)  
+- [Firmware, Host Software & Results FRD v7.3.2](DualCore_Optical_Motion_Firmware_Host_FRD_v7.3.2.pdf)  
   Dual-core architecture rationale, nominal 1 kHz encoder-supervisory control, host telemetry, shared-memory correctness requirements, state/fault behavior, measured characterization, control-path maturity, and verification traceability.
 
-- [Mechanical Platform & Physical Verification FRD v7.3.1](DualCore_Optical_Motion_Platform_Electrical_FRD_v7.3.1.pdf)  
+- [Mechanical Platform & Physical Verification FRD v7.3.2](DualCore_Optical_Motion_Platform_Electrical_FRD_v7.3.2.pdf)  
   Mechanical requirements, physical integration, translation verification, static-load evidence, representative integrated motion results, interface responsibilities, and verification traceability.
 
 Both reports use the established Herder professional FRD template.
@@ -28,3 +28,8 @@ Both reports use the established Herder professional FRD template.
 This repository is intentionally not a reproduction package. It contains no source code, Simulink/model files, CAD/NX models, schematics, PCB artwork, BOMs, pinouts, DIP-switch tables, wiring diagrams, memory maps, linker placement, cache/MPU settings, synchronization implementation, controller tuning values, build/flash instructions, commissioning procedures, assembly procedures, or setup instructions.
 
 The public documents describe requirements, engineering rationale, observable behavior, verification methods, limitations, and measured evidence. Reproduction-level implementation details remain private.
+
+
+## Embedded documentation figures
+
+The platform FRD includes selected schematic, PCB routing, ground-plane, and board-render figures as non-editable engineering documentation evidence. Editable schematic/PCB source files, fabrication outputs, CAD/EDA databases, BOMs, pin maps, and reproduction instructions are not distributed in this public package.
